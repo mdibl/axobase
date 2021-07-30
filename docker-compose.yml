@@ -1,0 +1,6 @@
+version: '2'
+
+services:
+  axobase-app:
+    build: .
+    container_name: axobase

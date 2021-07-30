@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+  axobase-app:
+    image: axobase:latest
+    env_file:
+      - .env-prod

@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  axobase-app:
+    env_file:
+      - .env-dev
+    volumes:
+      - .:/go/src/axobase
+      - ./scripts:/scripts
+    ports:
+      - 9100:9100
+    entrypoint: ["revel", "run", "axobase"]
