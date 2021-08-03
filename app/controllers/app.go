@@ -19,3 +19,7 @@ func (c App) Databases() revel.Result {
 func (c App) Nomenclature() revel.Result {
 	return c.RenderTemplate("app/nomenclature.html")
 }
+
+func (c App) Lines() revel.Result {
+	return c.RenderTemplate("app/lines.html")
+}

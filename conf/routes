@@ -9,6 +9,7 @@ module:testrunner
 
 GET     /                                       App.Index
 GET 	/databases 								App.Databases
+GET 	/transgenic_axolotl_lines				App.Lines
 GET 	/nomenclature 							App.Nomenclature
 
 # Ignore favicon requests
