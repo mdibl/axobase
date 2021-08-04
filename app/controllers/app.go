@@ -1,6 +1,8 @@
 package controllers
 
 import (
+	"axobase/app/utils"
+
 	"github.com/revel/revel"
 )
 
@@ -22,4 +24,14 @@ func (c App) Nomenclature() revel.Result {
 
 func (c App) Lines() revel.Result {
 	return c.RenderTemplate("app/lines.html")
+}
+
+func (c App) Antibodies() revel.Result {
+	records, err := utils.ParseAntibodiesCSV("antibodies.csv")
+	if err != nil {
+		//TODO: Log and handle the error accordingly.
+		panic(err)
+	}
+	c.ViewArgs["records"] = records
+	return c.RenderTemplate("app/antibodies.html")
 }

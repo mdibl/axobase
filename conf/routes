@@ -8,9 +8,11 @@ module:testrunner
 
 
 GET     /                                       App.Index
+GET 	/antibodies 							App.Antibodies
 GET 	/databases 								App.Databases
 GET 	/transgenic_axolotl_lines				App.Lines
 GET 	/nomenclature 							App.Nomenclature
+
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
