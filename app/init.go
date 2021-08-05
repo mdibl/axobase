@@ -3,6 +3,7 @@ package app
 import (
 	"bytes"
 	"html/template"
+	"strings"
 
 	"github.com/microcosm-cc/bluemonday"
 	_ "github.com/revel/modules"
@@ -66,6 +67,20 @@ func init() {
 		// Sanitize with BlueMonday
 		html := bluemonday.UGCPolicy().SanitizeBytes([]byte(unsafe))
 		return template.HTML(html)
+	}
+
+	revel.TemplateFuncs["FormatScreenShotURL"] = func(imgDesc string) string {
+		if imgDesc == "" {
+			return ""
+		}
+		chunks := strings.Split(imgDesc, "(")
+		return strings.TrimRight(strings.TrimLeft(chunks[1], "("), ")")
+	}
+	revel.TemplateFuncs["FormatPublicationURL"] = func(url string) string {
+		if strings.Contains(url, "http") {
+			return url
+		}
+		return ""
 	}
 }
 
