@@ -1,72 +1,106 @@
 {{template "header.html".}}
 {{template "app/templates/navbar.html".}}
 <div class="relative mt-8 py-10 bg-white overflow-hidden">
-	<div class="relative px-4 sm:px-6 lg:px-8">
-		<div class="max-w-screen-xl mx-auto">
-			<div class="mb-4">
-				<h1 class="mt-8 mb-2">
-					<span class="mt-8 block text-4xl leading-8 font-semibold text-gray-900 sm:text-4xl">
-						Transgenic Axolotl Lines
-					</span>
-				</h1>
-				<hr>
-			</div>
-			<h2 class="mt-2 text-xl font-semibold">
-					For academic and research usage, please contact the <a class="text-axo-green"
-					href="https://ambystoma.uky.edu/genetic-stock-center/"><i>Ambystoma</i>
-					genomic stock center</a>.
-			</h2> 
-			<p class="mt-2 text-lg">
-				In the interest of the salamander research community, we may
-				supply transgenic lines upon request. Please contact
-				<a class="text-axo-green"
-				href="mailto:pmurawala@mdibl.org">"pmurawala@mdibl.org"</a>, if
-				you are interested in any of the below listed transgenic lines.
-				<span class="font-bold italic">We do not supply axolotls to private individuals.</span> 
-			</p>
-			<p class="mt-8 text-xl font-bold uppercase">
-				Disclaimer!!! 
-			</p>
-			<p class="mt-2">
-				Many of these lines are developed by researchers that do not
-				belong to our lab. Developing transgenic axolotl is a
-				cumbersome process and can take long time to thoroughly
-				characterize it. 
-				<span class="font-bold italic">Please cite and credit them appropriately
-				while using these lines characterize it. </span>
-			</p>
-			<h3 class="mt-8 text-lg font-semibold">Regular strains</h3>
-			<ol class="list-decimal list-inside">
-				<li>d/d strain – A white animal with black eyes</li>
-				<li>Wild type animals – Black animals</li>
-			</ol>
-			<h3 class="mt-8 text-lg font-semibold">Ubiquitous fluorescence for grafting studies</h3>
-			<ol class="list-decimal list-inside" start=3>
-				<li>CAGGs:eGFP – Ubiquitous GFP expression (Sobkow et al, <a class="text-axo-green" href="https://www.sciencedirect.com/science/article/pii/S0012160605008638?via%3Dihub">Developmental Biology</a>, 2006)</li>
-				<li>CAGGs:Cherrynls – Ubiquitous nuclear Cherry expression (Kragl et al, <a class="text-axo-green" href="https://www.nature.com/articles/nature08152">Nature</a>, 2009)</li>
-			</ol>
-			<h3 class="mt-8 text-lg font-semibold">Fluorescent reporters</h3>
-			<ol class="list-decimal list-inside" start=7>
-				<li class="mt-2">B3Tub:memGFP -> For visualizing neurons (Khattak et al, <a class="text-axo-green" href="https://www.cell.com/stem-cell-reports/fulltext/S2213-6711(13)00003-9">Stem Cell Reports</a>, 2013)</li>
-				<li class="mt-2">CarAct:eGFP -> For visualizing muscle fibers (Khattak et al, <a class="text-axo-green" href="https://www.cell.com/stem-cell-reports/fulltext/S2213-6711(13)00003-9">Stem Cell Reports</a>, 2013)</li>
-				<li class="mt-2">CNP:eGFP -> For visualizing Schwann cells (Khattak et al, <a class="text-axo-green" href="https://www.cell.com/stem-cell-reports/fulltext/S2213-6711(13)00003-9">Stem Cell Reports</a>, 2013)</li>
-				<li class="mt-2">RARE:eGFP -> For visualizing retinoic acid activity (Monaghan et al, <a class="text-axo-green" href="https://www.sciencedirect.com/science/article/pii/S001216061200262X?via%3Dihub">Developmental Biology</a>, 2012)</li>
-				<li class="mt-2">Sox2:Cherry -> For visualizing neural progenitors (Fei et al, <a class="text-axo-green" href="https://www.pnas.org/content/114/47/12501">PNAS</a>, 2017)</li>
-			</ol>
-			<h3 class="mt-8 text-lg font-semibold">Cre drivers</h3>
-			<ol class="list-decimal list-inside" start=13>
-				<li class="mt-2">CAGGs:ERt-Cre-ERt-T2a-GFPnls -> Ubiquitous inducible Cre driver (Khattak et al, <a class="text-axo-green" href="https://www.cell.com/stem-cell-reports/fulltext/S2213-6711(13)00003-9">Stem Cell Reports</a>, 2013)</li>
-				<li class="mt-2">Col1A2:TFPnls-T2a-ERt-Cre-ERt -> For labeling various subtypes of connective tissue cells across the body (Gerber et al, <a class="text-axo-green" href="https://science.sciencemag.org/content/362/6413/eaaq0681">Science</a>,  2018)</li>
-				<li class="mt-2">Pax7:Pax7-T2a-memCherry-T2a-ERt-Cre-ERt -> For labeling satellite cells and Pax7 domain of the neural tube (Fei et al, <a class="text-axo-green" href="https://www.pnas.org/content/114/47/12501">PNAS</a>, 2017)</li>
-				<li class="mt-2">Prrx1:TFPnls-T2a-Cre-ERt -> For labeling limb mesenchyme derivatives (Gerber et al, <a class="text-axo-green" href="https://science.sciencemag.org/content/362/6413/eaaq0681">Science</a>,  2018)</li>
-				<li class="mt-2">Sox2:Sox2-T2a-memCherry-T2a-ERt-Cre-ERt -> For labeling neural progenitors and lateral line cells (Fei et al, <a class="text-axo-green" href="https://www.pnas.org/content/114/47/12501">PNAS</a>, 2017)</li>
-			</ol>
-			<h3 class="mt-8 text-lg font-semibold">LoxP reporters</h3>
-			<ol class="list-decimal list-inside" start=23>
-				<li class="mt-2">CAGGs:Brainbow2.1 (Currie et al, Dev Cell, 2016)</li>
-				<li class="mt-2">CAGGs:LoxP-GFP-LoxP-Cherry -> GFP to Cherry reporter (Khattak et al, <a class="text-axo-green" href="https://www.cell.com/stem-cell-reports/fulltext/S2213-6711(13)00003-9">Stem Cell Reports</a>, 2013)</li>
-			</ol>
-		</div>
-	</div>
+    <div class="relative px-4 sm:px-6 lg:px-8">
+        <div class="max-w-screen-xl mx-auto">
+            <div class="mb-4">
+                <h1 class="mt-8 mb-2">
+                    <span class="mt-8 block text-4xl leading-8 font-semibold text-gray-900 sm:text-4xl">
+                        Transgenic Axolotl Lines
+                    </span>
+                </h1>
+                <hr>
+            </div>
+            <p class="mt-2 text-lg font-normal">
+                This is a compilation of all published transgenic lines in axolotl. If you have
+                made a new line that is not present in the list, please send an email to
+                <a class="text-axo-green" href="mailto:info@axobase.org">info@axobase.org</a> with a scientific name of your line as per the guidelines on
+                this website and reference publication (Nowoshilow et al, <a class="text-axo-green" href="mailto:https://anatomypubs.onlinelibrary.wiley.com/doi/full/10.1002/dvdy.351">Dev Dyn</a>, 2021).
+            </p>
+            <p class="mt-4 text-lg">
+                For the academic and research usage of these lines, either contact the senior
+                author of the publication or check its availability at <a class="text-axo-green" href="mailto:https://ambystoma.uky.edu/genetic-stock-center/">Ambystoma genomic stock
+                    center</a>.
+            </p>
+            <p class="mt-4 text-xl font-bold uppercase">
+                Disclaimer!!!
+            </p>
+            <p class="mt-2">
+                Developing transgenic axolotl is a cumbersome process and can take long time to
+                thoroughly characterize it. <span class="font-bold italic">Please cite and
+                    credit them appropriately while using these lines characterize it. </span>
+            </p>
+            <h2 class="mt-8 text-lg"><span class="font-semibold">Regular and naturally occurring mutant stains</span> (Available at AGSC &ndash; *Cloned)</h2>
+            <ol class="list-decimal list-inside">
+                <li class="mt-2">Wildtype &ndash; dark grayish-green axolotls with black, olive, and iridescent mottling.</li>
+                <li class="mt-2">*White (<em>edn3</em>) &ndash; white axolotls with few melanophores; eyes have melanin and iridophores. </li>
+                <li class="mt-2">*Albino (<em>tyr</em>) &ndash; yellowish axolotls with increased numbers of xanthophores and no melanin pigmentation.</li>
+                <li class="mt-2">*White-Albino (<em>edn3/tyr</em>) &ndash; whitish-colored axolotls with no melanin pigmentation.</li>
+                <li class="mt-2">Melanoid &ndash; solid or spotted grayish-black axolotls with increased numbers of melanophores, no iridophores, and a reduced number of xanthophores.</li>
+                <li class="mt-2">Axanthic (<em>ax</em>) &ndash; spotted, grayish axolotls that lack xanthophores and iridophores.</li>
+                <li class="mt-2">*Cardiac (<em>tnnt2</em>) &ndash; axolotl with abnormal heart development; embryonic lethal. </li>
+                <li class="mt-2">Short-toes (<em>s</em>) &ndash; axolotl with abnormal limb and kidney development; lethal, rarely lives more than 1 year.</li>
+                <li class="mt-2">*Eyeless (<em>rax</em>) &ndash; axolotl that does not develop eyes. Sterile with enhanced melanin pigmentation.</li>
+            </ol>
+            <h3 class="mt-8 text-lg font-semibold">
+                Transgenic animals (Not all are available at AGSC, but we are working towards
+                this goal) Ubiquitous fluorescent reporter
+            </h3>
+            <ol class="list-decimal list-inside" start=10>
+                <li class="mt-2">tgSceI(<em>CAGGs:eGFP</em>)<sup>ETNKA</sup> &ndash; Ubiquitous GFP expression (Sobkow et al, <a class="text-axo-green" href="mailto:https://www.sciencedirect.com/science/article/pii/S0012160605008638?via%3Dihub">Developmental Biology</a>, 2006) </li>
+                <li class="mt-2">tgSceI(<em>CAGGs:RFP</em>)<sup>CrewsLab</sup> &ndash; Ubiquitous RFP expression</li>
+                <li class="mt-2">tgSceI(<em>CAGGs:CherryNuc</em>)<sup>ETNKA</sup> &ndash; Ubiquitous nuclear Cherry expression (Kragl et al, <a class="text-axo-green" href="https://www.nature.com/articles/nature08152">Nature</a>, 2009)</li>
+            </ol>
+            <h3 class="mt-8 text-lg font-semibold">Fluorescent reporters</h3>
+            <ol class="list-decimal list-inside" start=13>
+                <li class="mt-2">tgSceI(<em>Mmu.B3Tub:memGFP</em>)<sup>ETNKA</sup> &ndash; For visualizing neurons (Khattak et al, <a class="text-axo-green" href="https://www.cell.com/stem-cell-reports/fulltext/S2213-6711(13)00003-9" targe="_blank">Stem Cell Reports</a>, 2013)</li>
+                <li class="mt-2">tgSceI(<em>Xla.Caract:GFP</em>)<sup>ETNKA</sup> &ndash; For visualizing muscle fibers (Khattak et al, <a class="text-axo-green" href="https://www.cell.com/stem-cell-reports/fulltext/S2213-6711(13)00003-9" target="_blank">Stem Cell Reports</a>, 2013)</li>
+                <li class="mt-2">tgSceI(<em>Mmu.CNP:GFP</em>)<sup>ETNKA</sup> &ndash; For visualizing Schwann cells (Khattak et al, <a class="text-axo-green" href="https://www.cell.com/stem-cell-reports/fulltext/S2213-6711(13)00003-9" target="_blank">Stem Cell Reports</a>, 2013)</li>
+                <li class="mt-2">tgSceI(<em>Xtr.Col2A1:eGFP</em>)<sup>ETNKA</sup> &ndash; For visualizing chondrocytes (Khattak et al, <a class="text-axo-green" href="https://www.cell.com/stem-cell-reports/fulltext/S2213-6711(13)00003-9" target="_blank">Stem Cell Reports</a>, 2013)</li>
+                <li class="mt-2">tgSceI(<em>XlaKRT12:eGFP</em>)<sup>ETNKA</sup> &ndash; For visualizing outer epidermis (Khattak et al, <a class="text-axo-green" href="https://www.cell.com/stem-cell-reports/fulltext/S2213-6711(13)00003-9" target="_blank">Stem Cell Reports</a>, 2013)</li>
+                <li class="mt-2">tm(<em>Pax7<sup>t/+</sup>:Pax7-T2A-Cherry</em>)<sup>ETNKA</sup> &ndash; For visualizing satellite cells (Fei et al, <a class="text-axo-green" href="https://www.pnas.org/content/114/47/12501" target="_blank">PNAS</a>, 2017)</li>
+                <li class="mt-2">tm(<em>Sox2<sup>t/+</sup>:Sox2-T2A-Cherry</em>)<sup>ETNKA</sup> &ndash; For visualizing neural progenitors (Fei et al, <a class="text-axo-green" href="https://www.pnas.org/content/114/47/12501" target="_blank">PNAS</a>, 2017)</li>
+                <li class="mt-2">tgSceI(<em>RARE:GFP</em>)PMX &ndash; For visualizing retinoic acid activity (Monaghan et al, <a class="text-axo-green" href="https://www.sciencedirect.com/science/article/pii/S001216061200262X?via%3Dihub" target="_blank">Developmental Biology</a>, 2012)</li>
+                <li class="mt-2">tm(<em>HoxA13<sup>t/+</sup>:HoxA13-T2A-Cherry</em>)<sup>ETNKA</sup> &ndash; For visualizing hand plate cells (Oliveira et al., <a class="text-axo-green" href="mailto:https://www.biorxiv.org/content/10.1101/2021.02.03.428234v1.full" target="_blank">BioRxiv</a>, 2021)</li>
+            </ol>
+            <h3 class="mt-8 text-lg font-semibold">Cre drivers</h3>
+            <ol class="list-decimal list-inside" start=22>
+                <li class="mt-2">tgSceI(<em>CAGGs:ER<sup>T2</sup>-Cre-ER<sup>T2</sup>-T2a-GFPnls</em>)<sup>ETNKA</sup> &ndash; Ubiquitous inducible Cre driver (Khattak et al,&nbsp;<a class="text-axo-green" href="https://www.cell.com/stem-cell-reports/fulltext/S2213-6711(13)00003-9" target="_blank">Stem Cell Reports,</a></li>
+                <li class="mt-2">tgSceI(<em>Amex.Sox2:Cre-ER<sup>T2</sup>-T2A-GFP</em>)<sup>ETNKA</sup><em>&nbsp;</em>- Telencephalon-specific inducible Cre driver (Khattak et al,&nbsp;<a class="text-axo-green" href="https://www.cell.com/stem-cell-reports/fulltext/S2213-6711(13)00003-9" target="_blank">Stem Cell Reports,</a>&nbsp;2013)</li>
+                <li class="mt-2">tgTol2(<em>Xtr.Col2A1:ER-Cre-ER<sup>t2</sup>-T2A-eGFPnuc</em>)<sup>ETNKA</sup> &ndash; Inducible cre to label chondrocytes in primary body axis (Khattak et al,&nbsp;<a class="text-axo-green" href="https://www.cell.com/stem-cell-reports/fulltext/S2213-6711(13)00003-9" target="_blank">Stem Cell Reports,</a>&nbsp;2013)</li>
+                <li class="mt-2">tm(<em>Pax7<sup>t/+</sup>:Pax7-P2A-memCherry-T2A-ER<sup>T2</sup>-Cre-ER<sup>T2</sup></em>)<sup>ETNKA</sup> &ndash; Satellite cell-specific inducible Cre driver (Fei et al,&nbsp;<a class="text-axo-green" href="https://www.pnas.org/content/114/47/12501" target="_blank">PNAS,</a>&nbsp;2017)</li>
+                <li class="mt-2">tm(<em>Sox2<sup>t/+</sup>:Sox2-P2A-memCherry-T2A-ER<sup>T2</sup>-Cre-ER<sup>T2</sup></em>)<sup>ETNKA</sup> &ndash; Neural progenitor-specific inducible Cre driver (Fei et al,&nbsp;<a class="text-axo-green" href="https://www.pnas.org/content/114/47/12501" target="_blank">PNAS,</a>&nbsp;2017)</li>
+                <li class="mt-2">tgSceI<em>(Mmu.Prrx1:TFPnls-T2a-Cre-ER<sup>T2</sup></em>)<sup>ETNKA</sup> &ndash; Limb connective tissue progenitor-specific inducible Cre driver (Fused to one ER<sup>T2</sup>) (Gerber et al,&nbsp;<a class="text-axo-green" href="https://science.sciencemag.org/content/362/6413/eaaq0681" target="_blank">Science,&nbsp;</a>&nbsp;2018)</li>
+                <li class="mt-2">tgSceI<em>(Mmu.Prrx1:TFPnls-T2a-ER<sup>T2</sup>-Cre-ER<sup>T2</sup></em>)<sup>PMX</sup> &ndash; Limb connective tissue progenitor-specific inducible Cre driver (Fused to two ER<sup>T2</sup>) (Tilley et al,&nbsp;<a class="text-axo-green" href="https://anatomypubs.onlinelibrary.wiley.com/doi/epdf/10.1002/dvdy.357">Dev Dyn,</a>&nbsp; 2021)</li>
+                <li class="mt-2">tgSceI(<em>Xtr.Col1A2:TFPnls-T2A-ER<sup>T2</sup>-Cre-ER<sup>T2</sup></em>)<sup>ETNKA</sup> &ndash; inducible Cre line to label various subtypes of connective tissue cells across the body (Gerber et al,&nbsp;<a class="text-axo-green" href="https://science.sciencemag.org/content/362/6413/eaaq0681" target="_blank">Science,&nbsp;</a>&nbsp;2018)</li>
+                <li class="mt-2">tgSceI(<em>Xtr.Col2a1:TFPnls-T2A-ER<sup>T2</sup>-Cre-ER<sup>T2</sup>)</em><sup>ETNKA&nbsp;</sup>- inducible Cre line to label chondrocytes (Gerber et al,&nbsp;<a class="text-axo-green" href="https://science.sciencemag.org/content/362/6413/eaaq0681" target="_blank">Science,&nbsp;</a>&nbsp;2018)</li>
+                <li class="mt-2">tm(<em>Eya2<sup>t/+</sup>:Eya2-P2A-Cre</em>)<sup>WhitedLab</sup> &ndash; (Sousounis et al.,&nbsp;<a class="text-axo-green" href="https://elifesciences.org/articles/51217">eLife,</a>&nbsp;2020)</li>
+            </ol>
+            <h3 class="mt-8 text-lg font-semibold">Ubiquitous loxP reporters</h3>
+            <ol class="list-decimal list-inside" start=32>
+                <li class="mt-2">tgSceI<em>(CAGGs:LoxP-GFP-LoxP-Cherry)</em><sup>ETNKA</sup> &ndash; GFP to Cherry reporter (Khattak et al,&nbsp;<a class="text-axo-green" href="https://www.cell.com/stem-cell-reports/fulltext/S2213-6711(13)00003-9" target="_blank">Stem Cell Reports,</a>&nbsp;2013)</li>
+                <li class="mt-2">tgSceI<em>(CAGGs:LoxP-GFP-LoxP-Tomato)</em><sup>ETNKA</sup> &ndash; GFP to tdTomato reporter (Khattak et al,&nbsp;<a class="text-axo-green" href="https://www.cell.com/stem-cell-reports/fulltext/S2213-6711(13)00003-9" target="_blank">Stem Cell Reports,</a>&nbsp;2013)</li>
+                <li class="mt-2">tgSceI(<em>CAGGS:Brainbow 2.1)</em><sup>ETNKA</sup> &ndash; Brainbow 2.1 reporter (Currie et al,&nbsp;<a class="text-axo-green" href="https://murawalalab.mdibl.org/resources/_wp_link_placeholder">Dev Cell,</a>&nbsp;2016)</li>
+            </ol>
+            <h3 class="mt-8 text-lg font-semibold">LacI for gene function analysis</h3>
+            <ol class="list-decimal list-inside" start=35>
+                <li class="mt-2">tg(<em>CAG-LacI;pO-thrombospondin-4</em>)<sup>WhitedLab</sup> &ndash; &nbsp;(Whited et al,&nbsp;<a class="text-axo-green" href="https://www.pnas.org/content/109/34/13662">PNAS,</a>&nbsp;2012)</li>
+            </ol>
+            <h3 class="mt-8 text-lg font-semibold">Gene knock-out</h3>
+            <ol class="list-decimal list-inside" start=36>
+                <li class="mt-2">tm(<em>Tyr<sup>733v6D4/733v6D4</sup></em>)<sup>ETNKA</sup> - Tyrosinase gene knockout (Fei et al,&nbsp;<a class="text-axo-green" href="https://www.cell.com/article/S2213-6711(14)00204-5/fulltext" target="_blank">Stem Cell reports,</a>&nbsp;2014)</li>
+                <li class="mt-2">tm(<em>Sox2<sup>-/-</sup></em>)<sup>ETNKA</sup> &ndash; Sox2 gene knockout (Fei et al,&nbsp;<a class="text-axo-green" href="https://www.cell.com/article/S2213-6711(14)00204-5/fulltext" target="_blank">Stem Cell reports,</a>&nbsp;2014)</li>
+                <li class="mt-2">tm(<em>eGFP</em><sup>-/-</sup>)<sup>CrewsLab</sup> &ndash; GFP gene knockout (Flowers et al,&nbsp;<a class="text-axo-green" href="https://journals.biologists.com/dev/article/141/10/2165/45972/Highly-efficient-targeted-mutagenesis-in-axolotl" target="_blank">Development,</a>&nbsp;2014)</li>
+                <li class="mt-2">tm(<em>TbxT</em><sup>-/-</sup>)<sup>CrewsLab</sup> - Brachyury gene knockout (Flowers et al,&nbsp;<a class="text-axo-green" href="https://journals.biologists.com/dev/article/141/10/2165/45972/Highly-efficient-targeted-mutagenesis-in-axolotl" target="_blank">Development,</a>&nbsp;2014)</li>
+                <li class="mt-2">tm(<em>Thbs1</em><sup>-/-</sup>)<sup>WhitedLab</sup> - Thrombospondin gene knockout (Kuo et al,&nbsp;<a class="text-axo-green" href="https://onlinelibrary.wiley.com/doi/full/10.1002/reg2.29" target="_blank">Regeneration,</a>&nbsp;2014)</li>
+                <li class="mt-2">tm(<em>Eya2</em><sup>-/-</sup>)<sup>WhitedLab</sup> - Eya2 gene knockout (Sousounis et al.,&nbsp;<a class="text-axo-green" href="https://elifesciences.org/articles/51217" target="_blank">eLife,</a>&nbsp;2020)</li>
+            </ol>
+            <h3 class="mt-8 text-lg font-semibold">Gene overexpression</h3>
+            <ol class="list-decimal list-inside" start=42>
+	            <li class="mt-2">tgTol2(<em>Krt5:Edn3</em>)<sup>VossLab</sup> - (Woodcock et al,&nbsp;<a class="text-axo-green" href="https://www.nature.com/articles/s41598-017-00059-1" target="_blank">Sci Reports,</a>&nbsp;2017)</li>
+				<li class="mt-2">tgTol2(<em>Actb2:Edn3</em>)<sup>&nbsp;VossLab</sup> - (Woodcock et al,&nbsp;<a class="text-axo-green" href="https://www.nature.com/articles/s41598-017-00059-1" target="_blank">Sci Reports,</a>&nbsp;2017)</li>
+            </ol>
+        </div>
+    </div>
 </div>
 {{template "footer-nav.html".}}
