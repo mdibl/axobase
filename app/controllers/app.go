@@ -35,3 +35,7 @@ func (c App) Antibodies() revel.Result {
 	c.ViewArgs["records"] = records
 	return c.RenderTemplate("app/antibodies.html")
 }
+
+func (c App) ResearchLabs() revel.Result {
+	return c.RenderTemplate("app/research-labs.html")
+}

@@ -12,6 +12,7 @@ GET 	/antibodies 							App.Antibodies
 GET 	/databases 								App.Databases
 GET 	/transgenic_axolotl_lines				App.Lines
 GET 	/nomenclature 							App.Nomenclature
+GET 	/research_labs 							App.ResearchLabs
 
 
 # Ignore favicon requests
