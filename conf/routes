@@ -10,7 +10,7 @@ module:testrunner
 GET     /                                       App.Index
 GET 	/antibodies 							App.Antibodies
 GET 	/databases 								App.Databases
-GET 	/jobs 									App.Jobs
+GET 	/jobs 									App.Opportunities
 GET 	/nomenclature 							App.Nomenclature
 GET 	/transgenic_axolotl_lines				App.Lines
 GET 	/research_labs 							App.ResearchLabs

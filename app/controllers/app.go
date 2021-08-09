@@ -28,8 +28,8 @@ func (c App) Databases() revel.Result {
 	return c.RenderTemplate("app/databases.html")
 }
 
-func (c App) Jobs() revel.Result {
-	return c.RenderTemplate("app/jobs.html")
+func (c App) Opportunities() revel.Result {
+	return c.RenderTemplate("app/opportunities.html")
 }
 
 func (c App) Lines() revel.Result {
