@@ -32,7 +32,6 @@ func ParseAntibodiesCSV(filename string) ([]datamodels.AntibodyRecord, error) {
 	}
 
 	for _, elem := range lines[1:] {
-		fmt.Println(elem)
 		r := datamodels.AntibodyRecord{
 			AntigenTarget:       elem[0],
 			CellTypes:           elem[1],
