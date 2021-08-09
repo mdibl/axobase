@@ -29,12 +29,13 @@
                 </div>
                 <div class="hidden sm:block sm:ml-6">
                     <div class="flex space-x-4" x-data="{showOtherResources:false}">
-                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                        <a href="{{url "App.About"}}" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Who We Are</a>
                         <a href="{{url "App.Nomenclature"}}" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Nomenclature</a>
                         <a href="{{url "App.Databases"}}" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Databases</a>
                         <a href="{{url "App.Lines"}}" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Transgenic Axolotl Lines</a>
                         <a href="{{url "App.Antibodies"}}" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Salamander Antibodies</a>
                         <a href="{{url "App.ResearchLabs"}}" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Salamander Research Labs</a>
+                        <a href="{{url "App.Jobs"}}" class="text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Jobs</a>
                     </div>
                 </div>
             </div>
@@ -43,11 +44,13 @@
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="sm:hidden" id="mobile-menu" x-show="showMobileMenu" @click.away="showMobileMenu=false">
         <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="{{url "App.About"}}" class="block text-gray-600 hover:bg-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Who We Are</a>
             <a href="{{url "App.Nomenclature"}}" class="block text-gray-600 hover:bg-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Nomenclature</a>
             <a href="{{url "App.Databases"}}" class="block text-gray-600 hover:bg-gray-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Databases</a>
             <a href="{{url "App.Lines"}}" class="block text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Transgenic Axolotl Lines</a>
-            <a href="#" class="block text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Salamander Antibodies</a>
-            <a href="#" class="block text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Salamander Research Labs</a>
+            <a href="{{url "App.Antibodies"}}" class="block text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Salamander Antibodies</a>
+            <a href="{{url "App.ResearchLabs"}}" class="block text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Salamander Research Labs</a>
+            <a href="{{url "App.Jobs"}}" class="block text-gray-600 hover:bg-gray-200 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Jobs and Opportunities</a>
         </div>
     </div>
 </nav>

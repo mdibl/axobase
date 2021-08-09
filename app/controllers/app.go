@@ -14,18 +14,6 @@ func (c App) Index() revel.Result {
 	return c.RenderTemplate("app/index.html")
 }
 
-func (c App) Databases() revel.Result {
-	return c.RenderTemplate("app/databases.html")
-}
-
-func (c App) Nomenclature() revel.Result {
-	return c.RenderTemplate("app/nomenclature.html")
-}
-
-func (c App) Lines() revel.Result {
-	return c.RenderTemplate("app/lines.html")
-}
-
 func (c App) Antibodies() revel.Result {
 	records, err := utils.ParseAntibodiesCSV("antibodies.csv")
 	if err != nil {
@@ -36,6 +24,26 @@ func (c App) Antibodies() revel.Result {
 	return c.RenderTemplate("app/antibodies.html")
 }
 
+func (c App) Databases() revel.Result {
+	return c.RenderTemplate("app/databases.html")
+}
+
+func (c App) Jobs() revel.Result {
+	return c.RenderTemplate("app/jobs.html")
+}
+
+func (c App) Lines() revel.Result {
+	return c.RenderTemplate("app/lines.html")
+}
+
+func (c App) Nomenclature() revel.Result {
+	return c.RenderTemplate("app/nomenclature.html")
+}
+
 func (c App) ResearchLabs() revel.Result {
 	return c.RenderTemplate("app/research-labs.html")
+}
+
+func (c App) About() revel.Result {
+	return c.RenderTemplate("app/about.html")
 }

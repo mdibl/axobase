@@ -10,9 +10,11 @@ module:testrunner
 GET     /                                       App.Index
 GET 	/antibodies 							App.Antibodies
 GET 	/databases 								App.Databases
-GET 	/transgenic_axolotl_lines				App.Lines
+GET 	/jobs 									App.Jobs
 GET 	/nomenclature 							App.Nomenclature
+GET 	/transgenic_axolotl_lines				App.Lines
 GET 	/research_labs 							App.ResearchLabs
+GET 	/who_we_are 							App.About
 
 
 # Ignore favicon requests
