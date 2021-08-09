@@ -1,6 +1,6 @@
 {{template "header.html".}}
 {{template "app/templates/navbar.html".}}
-<div class="relative mt-8 py-10 bg-white overflow-hidden" x-data="{modalShow:false}">
+<div class="relative mt-8 py-10 bg-white overflow-hidden" x-data="{imgModalShow:false, imgUrl:''}">
     <div class="relative px-4 sm:px-6 lg:px-8">
         <div class="max-w-screen-xl mx-auto">
             <div class="mb-4">
@@ -17,9 +17,9 @@
         </div>
         <div class="max-w-screen-xl mx-auto">
             <!-- This example requires Tailwind CSS v2.0+ -->
-            <div class="flex flex-col max-h-96 pt-10">
+            <div class="flex flex-col max-h-screen pt-10">
                 <div class="flex-grow overflow-auto">
-                    <table class="table-auto min-w-full border-t border-gray-200 divide-y divide-gray-200">
+                    <table class="table-fixed min-w-full border-t border-gray-200 divide-y divide-gray-200">
                         <thead>
                             <tr>
                                 <th scope="col" class="px-6 py-3 text-left text-xs font-semibold bg-gray-100 edium text-gray-500 uppercase whitespace-normal sticky top-0 border-t border-l border-gray-200">
@@ -78,7 +78,7 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody class="bg-white divide-y divide-gray-200" x-data="{imgUrl:''}">
+                        <tbody class="bg-white divide-y divide-gray-200">
                             {{range .records}}
                             <tr>
                                 <td class="border-l border-gray-200 px-6 py-4 text-xs">
@@ -86,8 +86,8 @@
                                 </td>
                                 <td class="border-l border-gray-200 px-6 py-4 text-xs">{{.CellTypes}}</td>
                                 <td class="border-l border-gray-200 px-6 py-4 text-xs">
-                                    <button @click="modalShow=true">
-                                        <img class="w-40" src="{{.ExampleImages | FormatScreenShotURL}}">
+                                    <button @click="imgUrl='{{.ExampleImages | FormatScreenShotURL}}' ; $refs.modalImg.src=imgUrl ; imgModalShow=true">
+                                        <img class="w-full" src="{{.ExampleImages | FormatScreenShotURL}}">
                                     </button>
                                 </td>
                                 <td class="border-l border-gray-200 px-6 py-4 text-xs">{{.Vendor}}</td>
@@ -98,7 +98,7 @@
                                 <td class="border-l border-gray-200 px-6 py-4 text-xs">{{.Isotype}}</td>
                                 <td class="border-l border-gray-200 px-6 py-4 text-xs">{{.CloneName}}</td>
                                 <td class="border-l border-gray-200 px-6 py-4 text-xs">{{.SpeciesReactivity}}</td>
-                                <td style="width: 300px;" class="border-l border-gray-200 px-6 py-4 text-xs">{{.Description}}</td>
+                                <td class="border-l border-gray-200 px-6 py-4 text-xs">{{.Description}}</td>
                                 <td class="border-l border-gray-200 px-6 py-4 text-xs">{{.CatalogNum}}</td>
                                 <td class="border-l border-gray-200 px-6 py-4 text-xs">
                                     {{if ne .VendorPageLink ""}}
@@ -134,7 +134,7 @@
         </div>
     </div>
     <!-- This example requires Tailwind CSS v2.0+ -->
-    <div class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true" x-show="modalShow">
+    <div class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true" x-show="imgModalShow">
         <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
             <!--
               Background overlay, show/hide based on modal state.
@@ -159,9 +159,9 @@
                 From: "opacity-100 translate-y-0 sm:scale-100"
                 To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             -->
-            <div class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6" @click.away="modalShow=false">
+            <div class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6" @click.away="imgModalShow=false">
                 <div>
-                    <img src="/public/img/landing-img.jpg" x-ref="modalImg">
+                    <img class="w-full" x-ref="modalImg">
                 </div>
             </div>
         </div>
