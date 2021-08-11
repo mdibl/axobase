@@ -45,3 +45,7 @@ func (c App) Nomenclature() revel.Result {
 func (c App) ResearchLabs() revel.Result {
 	return c.RenderTemplate("app/research-labs.html")
 }
+
+func (c App) About() revel.Result {
+	return c.RenderTemplate("app/about.html")
+}
