@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"axobase/app/utils"
+	"fmt"
 
 	"github.com/revel/revel"
 )
@@ -16,6 +17,7 @@ func (c App) Index() revel.Result {
 
 func (c App) Antibodies() revel.Result {
 	records, err := utils.ParseAntibodiesCSV("antibodies.csv")
+	fmt.Println(records)
 	if err != nil {
 		//TODO: Log and handle the error accordingly.
 		panic(err)

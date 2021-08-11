@@ -73,9 +73,10 @@ func init() {
 		if imgDesc == "" {
 			return ""
 		}
-		chunks := strings.Split(imgDesc, "(")
-		return strings.TrimRight(strings.TrimLeft(chunks[1], "("), ")")
+		chunks := strings.Split(imgDesc, " ")
+		return strings.TrimRight(strings.TrimLeft(chunks[(len(chunks)-1)], "("), ")")
 	}
+
 	revel.TemplateFuncs["FormatPublicationURL"] = func(url string) string {
 		if strings.Contains(url, "http") {
 			return url
