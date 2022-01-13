@@ -3,6 +3,7 @@ package controllers
 import (
 	"axobase/app/utils"
 	"fmt"
+	"os"
 
 	"github.com/revel/revel"
 )
@@ -48,4 +49,12 @@ func (c App) ResearchLabs() revel.Result {
 
 func (c App) About() revel.Result {
 	return c.RenderTemplate("app/about.html")
+}
+
+func (c App) WhitePaper() revel.Result {
+	f, err := os.Open("/axobase/papers/Axolotl_White_Paper_Final.pdf")
+	if err != nil {
+		panic(err)
+	}
+	return c.RenderFile(f, revel.Inline)
 }
