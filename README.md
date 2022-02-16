@@ -2,10 +2,16 @@
 
 A web-server for the MDIBL Axobase resource.
 
-## To run the service on a virtual machine:
+## To build and run the service on a virtual machine:
     clone the repo
     cd <path_to>/axobase
     docker compose up (or docker-compose up)
+## To stop the service:
+    cd <path_to>/axobase
+    docker compose stop
+## To (re)start the service:
+    cd <path_to>/axobase
+    docker compose (re)start
 
 The above command will expose the service on localhost e.g., http://127.0.0.1:9100. This does not 
 provide external access to the application from the web. To gain access to the server from the web,
