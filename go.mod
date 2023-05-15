@@ -3,9 +3,9 @@ module axobase
 go 1.20
 
 require (
+        github.com/microcosm-cc/bluemonday v1.0.23
 	github.com/Jeffail/gabs v1.4.0
-	github.com/microcosm-cc/bluemonday v1.0.23
-	github.com/revel/modules v1.1.0
+        github.com/revel/modules v1.1.0
 	github.com/revel/revel v1.1.0
 	github.com/yuin/goldmark v1.5.4
 )
