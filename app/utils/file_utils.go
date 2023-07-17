@@ -11,13 +11,16 @@ import (
 func ParseAntibodiesCSV(filename string) ([]datamodels.AntibodyRecord, error) {
 	var err error
 	var records = make([]datamodels.AntibodyRecord, 0)
+	fmt.Print("filename: ", filename)
 
 	dataPath, err := ReadDataPath()
 	if err != nil {
 		return records, err
 	}
+	fmt.Print("dataPath: ", dataPath)
 
-	filepath := fmt.Sprintf("%s/%s", dataPath, filename)
+	filepath := fmt.Sprintf("%s/%s", "/tmp/", filename) // filepath := fmt.Sprintf("%s/%s", dataPath, filename)
+	fmt.Print("filepath: ", filepath)
 	fileHandle, err := os.Open(filepath)
 	if err != nil {
 		return records, err

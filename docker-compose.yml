@@ -2,5 +2,6 @@ version: '2'
 
 services:
   axobase-app:
+    platform: linux/amd64
     build: .
     container_name: axobase

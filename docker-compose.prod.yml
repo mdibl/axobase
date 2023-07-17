@@ -2,6 +2,7 @@ version: '2'
 
 services:
   axobase-app:
+    platform: linux/amd64
     image: axobase:latest
     env_file:
       - .env-prod
