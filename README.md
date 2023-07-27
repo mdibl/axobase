@@ -2,22 +2,29 @@
 
 A web-server for the MDIBL Axobase resource.
 
-## To build and run the service on a virtual machine:
-    clone the repo
-    cd <path_to>/axobase
-    docker compose up (or docker-compose up)
-## To stop the service:
-    cd <path_to>/axobase
-    docker compose stop
-## To (re)start the service:
-    cd <path_to>/axobase
-    docker compose (re)start
+# Making changes
 
-The above command will expose the service on localhost e.g., http://127.0.0.1:9100. This does not 
-provide external access to the application from the web. To gain access to the server from the web,
-the machine must be configured with proxy such as Apache or Nginx which can forward all traffic to
-127.0.01:9100. Alternatively, the Revel server itself could be run as root and configured to listen on 
-port 80. This is not advised. 
+*Note: This app is built on x86 architecture, which means that building on ARM architecture will fail. \
+To get around this, make and test changes on Random or another x86 machine. \
+Axobase is hosted on AWS App Runner, which deploys the AWS ECR image. \
+
+Before building the new local image, remove old axobase images using 'docker images | grep "axo"' \
+Run 'docker rmi -f  <image name>' to remove the old images. \
+
+Pull or clone the GitHub repo and make desired changes. \
+Then use 'docker compose up' to build the new image. \
+You can view the local changes via ssh tunnel to port 9100 of the server that you're testing on. \
+Example: ssh -L 9100:localhost:9100 username@random.mdibl.org \
+
+Next, tag and push the image to our AWS ECR repo: \
+First, retrieve AWS credentials with \
+'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 012870262837.dkr.ecr.us-east-1.amazonaws.com'
+
+Tag the newly built image using 'docker tag axobase-axobase-app:latest 012870262837.dkr.ecr.us-east-1.amazonaws.com/axobase:latest'
+
+Push the newly tagged image to ECR using 'docker push 012870262837.dkr.ecr.us-east-1.amazonaws.com/axobase:latest'
+
+The App Runner service automatically detects the updated image and redeploys the service.
 
 ## Code Layout
 
