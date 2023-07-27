@@ -52,7 +52,7 @@ func (c App) About() revel.Result {
 }
 
 func (c App) WhitePaper() revel.Result {
-	f, err := os.Open("/axobase/papers/Axolotl_White_Paper_Final.pdf")
+	f, err := os.Open("/tmp/Axolotl_White_Paper_Final.pdf")
 	if err != nil {
 		panic(err)
 	}
