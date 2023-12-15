@@ -25,6 +25,7 @@ Tag the newly built image using 'docker tag axobase-axobase-app:latest 012870262
 Push the newly tagged image to ECR using 'docker push 012870262837.dkr.ecr.us-east-1.amazonaws.com/axobase:latest'
 
 The App Runner service automatically detects the updated image and redeploys the service.
+This can be verified by navigating to the AWS AppRunner service in the console and/or waiting a few minutes and reloading axobase.org
 
 ## Code Layout
 
