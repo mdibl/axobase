@@ -15,6 +15,7 @@ Pull or clone the GitHub repo and make desired changes. \
 Then use 'docker compose up' to build the new image. \
 You can view the local changes via ssh tunnel to port 9100 of the server that you're testing on. \
 Example: ssh -L 9100:localhost:9100 username@random.mdibl.org \
+Then visit the url: localhost:9100 on your local system's browser \
 
 Next, tag and push the image to our AWS ECR repo: \
 First, retrieve AWS credentials with \
