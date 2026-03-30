@@ -1,5 +1,56 @@
 {{template "header.html".}}
 {{template "app/templates/navbar.html".}}
+
+
+<!-- Meeting Banner -->
+<div id="meeting-banner" style="
+    background: linear-gradient(90deg, #2d6a4f, #40916c, #2d6a4f);
+    background-size: 200% 100%;
+    animation: gradientShift 3s ease infinite;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    overflow: hidden;
+    cursor: pointer;
+">
+    <style>
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        #meeting-banner a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 700;
+        }
+        #meeting-banner a:hover {
+            color: #b7e4c7;
+        }
+        #meeting-banner .pulse-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #ffd166;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 1.5s ease infinite;
+            vertical-align: middle;
+        }
+    </style>
+    <span class="pulse-dot"></span>
+    <span>Annual Meeting: 3-6 October, National Autonomous University of Mexico (UNAM), Mexico City, Mexico &nbsp;|&nbsp;
+        <a target="_blank">Learn More & Register</a>
+    </span>
+</div>
+
+
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="mt-10 relative max-w-7xl mx-auto overflow-hidden lg:rounded-md">
     <div class="mx-auto">
